@@ -1,0 +1,114 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+header{
+    height: 60px;  
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    height: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+}
+.navbar ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.navbar ul li{
+    margin-left: 2rem;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+}
+.navbar ul li a{
+    color: #6B7280;
+    text-decoration: none;
+}
+.navbar ul li a::after{
+    content: '';
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transition: .15s ease-in-out;
+}
+.navbar ul li a:hover::after{
+    border-bottom: 2px solid #6B7280;
+}
+.navbar ul li a:focus::after{
+    border-bottom: 2px solid #E3B261;
+}
+
+.navbar ul li a:hover, .navbar ul li a:focus{
+    color: #000;
+}
+
+/* DASHBOARD SECTION */
+#dashboard{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 64px;
+}
+#dashboard h1{
+    text-align: center;
+}
+.card-about-user{
+    
+    border-radius: 16px;
+    padding:64px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0;
+    gap: 32px;
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, .25);
+  
+}
+
+.card-about-user img{
+    width: 70px;
+    height: 70px;
+
+}
+.username{
+    font-size: 25px;
+}
+.thoughts-about-future{
+    grid-column: 3 / span 2;
+    color: #6B7280;
+    font-size: 20px;
+}
